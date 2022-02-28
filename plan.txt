@@ -38,7 +38,7 @@ This will be a website for various users to track contacts.
 - Create/edit category
 - View categories
 - Assign contact to category
-- delete category
+- Delete category
 
 --- Additional Views ---
 - Login page
