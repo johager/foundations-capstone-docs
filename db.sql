@@ -10,7 +10,8 @@ create table contacts (
     user_id not null references users(user_id),
     fname varchar(75),
     lname varchar(75),
-    company varchar(75)
+    company varchar(75),
+    note text
 );
 
 create table phone_types (
