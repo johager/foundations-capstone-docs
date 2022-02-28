@@ -1,0 +1,1 @@
+Planning documents for my Foundations capstone project.

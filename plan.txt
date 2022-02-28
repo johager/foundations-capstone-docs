@@ -1,0 +1,46 @@
+=========================
+=== Contacts Web Page ===
+=========================
+
+This will be a website for various users to track contacts.
+
+=== MVP ==
+
+--- Features ---
+- Create/edit a contact entry: name, phone, email
+- Display all contacts
+- Display contact details
+
+--- Views ---
+- Contacts list
+- Contact detail: add/edit 
+- Contact detail: display
+
+=== Other Features ===
+
+--- Users ---
+- Create user account
+- Handle user login
+
+--- Contact ---
+- Delete a contact
+- Add additional phone numbers
+- Delete a phone number
+- Add additional email addresses
+- Delete an email address
+- Add physical addresses
+- Delete a physical address
+- Include optional "notes" data
+- Have email address launch user's email program
+- Have physical address launch Google maps
+
+--- Category ---
+- Create/edit category
+- View categories
+- Assign contact to category
+- delete category
+
+--- Additional Views ---
+- Login page
+- Create/edit category page
+- Categories
