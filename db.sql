@@ -67,7 +67,7 @@ create table addresses (
 create table groups (
     group_id serial primary key,
     user_id int not null references users(user_id),
-    gname varchar(75) not null
+    name varchar(75) not null
 );
 
 create table contacts_groups (
