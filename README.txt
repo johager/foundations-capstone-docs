@@ -1,6 +1,8 @@
 Planning documents for my Devmountain Foundations capstone project.
 
-=== db.* ===
+The project (deployment) files are at https://github.com/johager/foundations-capstone-project.
+
+=== db ===
 
 db.sql - PostgreSQL database definition
 db.pdf - PDF diagram of the DB definition created from https://dbdiagram.io/

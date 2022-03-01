@@ -1,3 +1,14 @@
+drop table if exists contacts_groups;
+drop table if exists phones;
+drop table if exists emails;
+drop table if exists addresses;
+drop table if exists phone_types;
+drop table if exists email_types;
+drop table if exists address_types;
+drop table if exists groups;
+drop table if exists contacts;
+drop table if exists users;
+
 create table users (
     user_id serial primary key,
     name varchar(75) not null,
@@ -7,7 +18,7 @@ create table users (
 
 create table contacts (
     contact_id serial primary key,
-    user_id not null references users(user_id),
+    user_id int not null references users(user_id),
     fname varchar(75),
     lname varchar(75),
     company varchar(75),
@@ -16,51 +27,51 @@ create table contacts (
 
 create table phone_types (
     type_id serial primary key,
-    type varchar(15)
+    type varchar(15) not null
 );
 
 create table email_types (
     type_id serial primary key,
-    type varchar(15)
+    type varchar(15) not null
 );
 
 create table address_types (
     type_id serial primary key,
-    type varchar(15)
+    type varchar(15) not null
 );
 
 create table phones (
     id serial primary key,
-    contact_id not null references contacts(contact_id),
-    type_id not null references phone_types(type_id),
-    number varchar(20),
-    sort tinyint not null
+    contact_id int not null references contacts(contact_id),
+    type_id int not null references phone_types(type_id),
+    phone varchar(20) not null,
+    sort smallint not null
 );
 
 create table emails (
     id serial primary key,
-    contact_id not null references contacts(contact_id),
-    type_id not null references email_types(type_id),
-    email varchar(100),
-    sort tinyint not null
+    contact_id int not null references contacts(contact_id),
+    type_id int not null references email_types(type_id),
+    email varchar(100) not null,
+    sort smallint not null
 );
 
 create table addresses (
     id serial primary key,
-    contact_id not null references contacts(contact_id),
-    type_id not null references address_types(type_id),
-    address varchar(200),
-    sort tinyint not null
+    contact_id int not null references contacts(contact_id),
+    type_id int not null references address_types(type_id),
+    address varchar(200) not null,
+    sort smallint not null
 );
 
 create table groups (
     group_id serial primary key,
-    user_id not null references users(user_id),
-    group varchar(75)
+    user_id int not null references users(user_id),
+    gname varchar(75) not null
 );
 
 create table contacts_groups (
     id serial primary key,
-    contact_id not null references contacts(contact_id),
-    group_id not null references groups(group_id)
+    contact_id int not null references contacts(contact_id),
+    group_id int not null references groups(group_id)
 );
