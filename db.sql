@@ -13,7 +13,9 @@ create table users (
     user_id serial primary key,
     name varchar(75) not null,
     email varchar(75) not null,
-    passwd varchar(150) not null 
+    passwd varchar(150) not null,
+    group_id int default -1,
+    contact_id int default -1
 );
 
 create table contacts (
@@ -109,7 +111,7 @@ insert into contacts (user_id, fname, lname) values
 (1,'Daniel', 'Dennett'),
 (1,'Richard', 'Dawkins'),
 (1,'Carlo', 'Rovelli'),
-(1,'Gladwell', 'Gladwell'),
+(1,'Malcolm', 'Gladwell'),
 (1,'Walter', 'Isaacson'),
 (1,'Steven', 'Pinker'),
 (1,'Christopher', 'Hitchens');
@@ -125,7 +127,8 @@ insert into contacts (user_id, fname, lname, note) values
 (1,'Benjamin', 'Sisko', '<i>Star Trek: Deep Space Nine</i><br>Commanding Officer, Commander<br><i>Deep Space Nine</i>'),
 (1,'Julian', 'Bashir', '<i>Star Trek: Deep Space Nine</i><br>Chief Medical Officer, Lieutenant<br><i>Deep Space Nine</i>'),
 (1,'Jadzia', 'Dax', '<i>Star Trek: Deep Space Nine</i><br>Chief Science Officer, Lieutenant<br><i>Deep Space Nine</i>'),
-(1,'Miles', 'O''Brien', '<i>Star Trek: Deep Space Nine</i><br>Chief Operations Officer, Senior Chief Petty Officer<br><i>Deep Space Nine</i>');
+(1,'Miles', 'O''Brien', '<i>Star Trek: Deep Space Nine</i><br>Chief Operations Officer, Senior Chief Petty Officer<br><i>Deep Space Nine</i>'),
+(1,'', 'Redshirt #1', '<i>Star Trek: The Original Series</i><br>Away Team Mamber<br><i>Star Trek: The Original Series</i>');
 
 insert into contacts (user_id, fname, lname) values
 (1,'Galileo', 'Galilei'),
@@ -175,7 +178,7 @@ insert into contacts (user_id, fname, lname) values
 (1,'Kurt', 'Vonnegut'),
 (1,'Michael', 'Crichton');
 
-update contacts set note = E'Research professor in the Walter Burke Institute for Theoretical Physics in the California Institute of Technology (Caltech) Department of Physics. He specializes in quantum mechanics, gravity, and cosmology.<ul><li>The Big Picture: On the Origins of Life, Meaning, and the Universe Itself, 2016</li></ul>' where lname='Carroll';
+update contacts set note = E'Research professor in the Walter Burke Institute for Theoretical Physics in the California Institute of Technology (Caltech) Department of Physics. He specializes in quantum mechanics, gravity, and cosmology.\n\nBooks<ul><li>The Big Picture: On the Origins of Life, Meaning, and the Universe Itself, 2016</li></ul>' where lname='Carroll';
 
 update contacts set note = E'University Professor and Austin B. Fletcher Professor of Philosophy, and Director of the Center for Cognitive Studies at Tufts University.\n\nBooks<ul><li>Consciousness Explained, 1992</li><li>Darwin''s Dangerous Idea: Evolution and the Meaning of Life, 1995</li></ul>' where lname='Dennett';
 
