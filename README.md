@@ -1,21 +1,25 @@
-Planning documents for my Devmountain Foundations capstone project.
+# CONTACTS Web App
+
+This repo contains the planning documents for my Devmountain Foundations capstone project, a contacts web app.
 
 The project (deployment) files are at https://github.com/johager/foundations-capstone-project.
 
-=== db ===
+## Database
 
 db.sql - PostgreSQL database definition
+
 db.pdf - PDF diagram of the DB definition created from https://dbdiagram.io/
 
-=== plan ===
+## Plan
 
 plan.txt - Main planning document with MVP and features defined.
 
-=== planning ===
+## Planning
 
 planning.xlsx - Xcel spreadsheet of grading checklist items
+
 planning.pdf - PDF file of the spreadsheet
 
-=== wireframe ===
+## Wireframe
 
 wireframe.pdf - View wireframes from https://www.figma.com/
